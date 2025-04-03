@@ -3,23 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Location de Licornes pour Événements</title>
+  <title>Licorn chez moi - Location de Licornes pour Événements</title>
   <style>
+    /* Couleurs principales */
+    :root {
+      --red-main: #d32f2f;
+      --red-dark: #9a0007;
+      --red-light: #ff6659;
+      --grey-light: #f5f5f5;
+      --grey-dark: #333;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: var(--grey-light);
       margin: 0;
       padding: 0;
-      color: #333;
+      color: var(--grey-dark);
     }
     header, footer {
-      background: #8a2be2;
+      background: var(--red-main);
       color: #fff;
       text-align: center;
       padding: 20px;
     }
     nav {
-      background: #9370DB;
+      background: var(--red-dark);
       padding: 10px;
       text-align: center;
     }
@@ -27,24 +36,32 @@
       color: #fff;
       text-decoration: none;
       margin: 0 15px;
+      padding: 10px 20px;
+      border-radius: 25px;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background: var(--red-light);
     }
     .container {
       max-width: 1200px;
       margin: 20px auto;
       padding: 20px;
       background: #fff;
-    }
-    .hero {
-      text-align: center;
-      padding: 50px 20px;
-      background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
-      color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     .section {
       margin-bottom: 40px;
     }
     .section h2 {
-      color: #8a2be2;
+      color: var(--red-main);
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
     }
     .unicorns {
       display: flex;
@@ -57,73 +74,116 @@
       padding: 15px;
       border: 1px solid #ddd;
       text-align: center;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .unicorn:hover {
+      transform: translateY(-5px);
     }
     .unicorn img {
       max-width: 100%;
       height: auto;
+      border-radius: 8px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    form input, form textarea {
+      margin: 8px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+    form button {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: var(--red-main);
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background 0.3s ease;
+    }
+    form button:hover {
+      background-color: var(--red-dark);
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Location de Licornes</h1>
+    <h1>Licorn chez moi</h1>
     <p>Des licornes magiques pour vos événements exceptionnels !</p>
   </header>
   
   <nav>
-    <a href="#business-model">Business Model</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+    <a href="#qui-sommes-nous">Qui sommes-nous ?</a>
+    <a href="#nos-services">Nos services</a>
+    <a href="#nous-contacter">Nous contacter</a>
   </nav>
   
-  <div class="hero">
-    <h2>Louez une licorne pour votre événement</h2>
-    <p>Faites de votre événement un moment inoubliable avec une touche de magie.</p>
-  </div>
-  
   <div class="container">
-    <section id="business-model" class="section">
-      <h2>Notre Business Model</h2>
-      <ul>
-        <li>Location de licornes pour mariages, fêtes, anniversaires et événements d'entreprise.</li>
-        <li>Packages sur mesure adaptés à vos besoins.</li>
-        <li>Service de transport sécurisé et assurance incluse.</li>
-        <li>Disponibilité nationale avec une équipe dédiée pour chaque événement.</li>
-      </ul>
+    <!-- Section: Qui sommes-nous ? -->
+    <section id="qui-sommes-nous" class="section">
+      <h2>Qui sommes-nous ?</h2>
+      <p>
+        <strong>Licorn chez moi</strong> est une entreprise innovante spécialisée dans la location de licornes pour tous types d’événements.
+        Notre équipe passionnée et expérimentée s’engage à offrir un service sur mesure, alliant professionnalisme et une touche de magie.
+      </p>
+      <p>
+        Nous mettons tout en œuvre pour assurer la sécurité, le bien-être de nos licornes et la satisfaction totale de nos clients.
+        Faites-nous confiance pour transformer vos événements en moments inoubliables.
+      </p>
     </section>
     
-    <section id="services" class="section">
-      <h2>Nos Services</h2>
+    <!-- Section: Nos services -->
+    <section id="nos-services" class="section">
+      <h2>Nos services</h2>
+      <p>Nous proposons différentes formules de location adaptées à vos événements :</p>
+      <ul>
+        <li><strong>Mariage</strong> : Une touche féérique pour célébrer l’union de deux êtres.</li>
+        <li><strong>Anniversaire</strong> : Des fêtes magiques et surprenantes pour tous les âges.</li>
+        <li><strong>Événement d'entreprise</strong> : Un service original pour dynamiser vos séminaires et lancements.</li>
+        <li><strong>Événements privés</strong> : Soirées, cérémonies et autres occasions spéciales.</li>
+      </ul>
       <div class="unicorns">
         <div class="unicorn">
-          <img src="https://via.placeholder.com/300x200?text=Licorne+Blanche" alt="Licorne Blanche">
-          <h3>Licorne Blanche</h3>
-          <p>Classique et élégante, idéale pour tout type d'événement.</p>
+          <img src="https://via.placeholder.com/300x200?text=Licorne+Mariage" alt="Licorne pour Mariage">
+          <h3>Licorne Mariage</h3>
+          <p>Élégance et grâce pour célébrer votre union.</p>
         </div>
         <div class="unicorn">
-          <img src="https://via.placeholder.com/300x200?text=Licorne+Arc-en-ciel" alt="Licorne Arc-en-ciel">
-          <h3>Licorne Arc-en-ciel</h3>
-          <p>Pour une touche de fantaisie et de couleur lors de vos fêtes.</p>
+          <img src="https://via.placeholder.com/300x200?text=Licorne+Anniversaire" alt="Licorne pour Anniversaire">
+          <h3>Licorne Anniversaire</h3>
+          <p>Pour des fêtes inoubliables pleines de magie.</p>
         </div>
         <div class="unicorn">
-          <img src="https://via.placeholder.com/300x200?text=Licorne+Dor%C3%A9e" alt="Licorne Dorée">
-          <h3>Licorne Dorée</h3>
-          <p>Luxueuse et unique, idéale pour des événements prestigieux.</p>
+          <img src="https://via.placeholder.com/300x200?text=Licorne+Entreprise" alt="Licorne pour Événement d'entreprise">
+          <h3>Licorne Événement d'entreprise</h3>
+          <p>L’originalité qui dynamise vos rencontres professionnelles.</p>
         </div>
       </div>
     </section>
     
-    <section id="contact" class="section">
-      <h2>Contactez-nous</h2>
-      <p>Pour plus d'informations ou pour réserver votre licorne, envoyez-nous un email à 
-        <a href="mailto:contact@licornesmagiques.com">contact@licornesmagiques.com</a> 
-        ou appelez-nous au <strong>01 23 45 67 89</strong>.
-      </p>
+    <!-- Section: Nous contacter -->
+    <section id="nous-contacter" class="section">
+      <h2>Nous contacter</h2>
+      <p>Pour plus d'informations ou pour réserver une licorne, remplissez le formulaire ci-dessous :</p>
+      <form action="#" method="post">
+        <input type="text" name="nom" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <input type="tel" name="telephone" placeholder="Votre numéro de téléphone">
+        <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+      <p>Ou contactez-nous directement par téléphone au <strong>01 23 45 67 89</strong>.</p>
     </section>
   </div>
   
   <footer>
-    <p>&copy; 2025 Location de Licornes - Tous droits réservés</p>
+    <p>&copy; 2025 Licorn chez moi - Tous droits réservés</p>
   </footer>
 </body>
 </html>
