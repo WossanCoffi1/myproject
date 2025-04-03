@@ -3,32 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Licorn chez moi - Location de Licornes pour Événements</title>
+  <title>Licorn chez moi - Location de Licornes Féériques</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Calendly widget style -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <style>
-    /* Couleurs principales */
+    /* Palette et polices */
     :root {
-      --red-main: #d32f2f;
-      --red-dark: #9a0007;
-      --red-light: #ff6659;
-      --grey-light: #f5f5f5;
-      --grey-dark: #333;
+      --primary: #ff99cc;      /* Pastel pink */
+      --secondary: #ff66a3;      /* Darker pink */
+      --accent: #ffb6c1;         /* Light pink accent */
+      --background: #fff0f5;     /* Lavender blush */
+      --text-color: #333;
     }
-
     body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      background: var(--grey-light);
+      font-family: 'Roboto', sans-serif;
+      background: var(--background);
       margin: 0;
       padding: 0;
-      color: var(--grey-dark);
+      color: var(--text-color);
     }
     header, footer {
-      background: var(--red-main);
+      background: var(--primary);
       color: #fff;
       text-align: center;
       padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    header h1, footer p {
+      font-family: 'Pacifico', cursive;
     }
     nav {
-      background: var(--red-dark);
+      background: var(--secondary);
       padding: 10px;
       text-align: center;
     }
@@ -41,7 +48,7 @@
       transition: background 0.3s ease;
     }
     nav a:hover {
-      background: var(--red-light);
+      background: var(--accent);
     }
     .container {
       max-width: 1200px;
@@ -55,9 +62,10 @@
       margin-bottom: 40px;
     }
     .section h2 {
-      color: var(--red-main);
+      color: var(--primary);
       border-bottom: 2px solid #ddd;
       padding-bottom: 10px;
+      font-family: 'Pacifico', cursive;
     }
     ul {
       list-style-type: disc;
@@ -76,6 +84,7 @@
       text-align: center;
       border-radius: 8px;
       transition: transform 0.3s ease;
+      background: #fffafc;
     }
     .unicorn:hover {
       transform: translateY(-5px);
@@ -99,7 +108,7 @@
     form button {
       margin-top: 10px;
       padding: 10px;
-      background-color: var(--red-main);
+      background-color: var(--primary);
       color: #fff;
       border: none;
       border-radius: 25px;
@@ -108,14 +117,23 @@
       transition: background 0.3s ease;
     }
     form button:hover {
-      background-color: var(--red-dark);
+      background-color: var(--secondary);
+    }
+    /* Calendly widget container */
+    #calendly-widget {
+      margin-top: 20px;
+      min-width: 320px;
+      height: 580px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Licorn chez moi</h1>
-    <p>Des licornes magiques pour vos événements exceptionnels !</p>
+    <p>Des licornes féériques pour illuminer vos événements !</p>
   </header>
   
   <nav>
@@ -130,11 +148,10 @@
       <h2>Qui sommes-nous ?</h2>
       <p>
         <strong>Licorn chez moi</strong> est une entreprise innovante spécialisée dans la location de licornes pour tous types d’événements.
-        Notre équipe passionnée et expérimentée s’engage à offrir un service sur mesure, alliant professionnalisme et une touche de magie.
+        Notre équipe passionnée et expérimentée s’engage à offrir un service sur mesure, alliant professionnalisme et une touche féérique.
       </p>
       <p>
-        Nous mettons tout en œuvre pour assurer la sécurité, le bien-être de nos licornes et la satisfaction totale de nos clients.
-        Faites-nous confiance pour transformer vos événements en moments inoubliables.
+        Nous veillons à la sécurité et au bien-être de nos licornes, pour vous garantir une expérience magique et inoubliable.
       </p>
     </section>
     
@@ -144,7 +161,7 @@
       <p>Nous proposons différentes formules de location adaptées à vos événements :</p>
       <ul>
         <li><strong>Mariage</strong> : Une touche féérique pour célébrer l’union de deux êtres.</li>
-        <li><strong>Anniversaire</strong> : Des fêtes magiques et surprenantes pour tous les âges.</li>
+        <li><strong>Anniversaire</strong> : Des fêtes magiques et inoubliables pour tous les âges.</li>
         <li><strong>Événement d'entreprise</strong> : Un service original pour dynamiser vos séminaires et lancements.</li>
         <li><strong>Événements privés</strong> : Soirées, cérémonies et autres occasions spéciales.</li>
       </ul>
@@ -152,7 +169,7 @@
         <div class="unicorn">
           <img src="https://via.placeholder.com/300x200?text=Licorne+Mariage" alt="Licorne pour Mariage">
           <h3>Licorne Mariage</h3>
-          <p>Élégance et grâce pour célébrer votre union.</p>
+          <p>Élégance et grâce pour votre union.</p>
         </div>
         <div class="unicorn">
           <img src="https://via.placeholder.com/300x200?text=Licorne+Anniversaire" alt="Licorne pour Anniversaire">
@@ -170,7 +187,7 @@
     <!-- Section: Nous contacter -->
     <section id="nous-contacter" class="section">
       <h2>Nous contacter</h2>
-      <p>Pour plus d'informations ou pour réserver une licorne, remplissez le formulaire ci-dessous :</p>
+      <p>Pour plus d'informations ou pour réserver une licorne féérique, remplissez le formulaire ci-dessous :</p>
       <form action="#" method="post">
         <input type="text" name="nom" placeholder="Votre nom" required>
         <input type="email" name="email" placeholder="Votre email" required>
@@ -179,11 +196,27 @@
         <button type="submit">Envoyer</button>
       </form>
       <p>Ou contactez-nous directement par téléphone au <strong>01 23 45 67 89</strong>.</p>
+      <h3>Planifiez un rendez-vous</h3>
+      <!-- Calendly inline widget -->
+      <div id="calendly-widget"></div>
     </section>
   </div>
   
   <footer>
     <p>&copy; 2025 Licorn chez moi - Tous droits réservés</p>
   </footer>
+  
+  <!-- Calendly widget script -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+      Calendly.initInlineWidget({
+        url: 'https://calendly.com/your-calendly-link', // Remplacez par votre lien Calendly réel
+        parentElement: document.getElementById('calendly-widget'),
+        prefill: {},
+        utm: {}
+      });
+    });
+  </script>
 </body>
 </html>
